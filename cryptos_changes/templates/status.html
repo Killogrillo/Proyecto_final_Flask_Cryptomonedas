@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Status {% endblock %}
+{% block menu%}
+    <nav class="navbar-container">
+        <ul class = "navbar-list">
+            <li class="navbar-item"><a href="/">Inicio</a></li>
+            <li class="navbar-item"><a href="/purchase">Compra</a></li>
+            <li class="navbar-item"><p class="item-desactivado">Estado</p></li>
+        </ul>
+    </nav>
+{% endblock %}
+{% block contenido %}
+
+    <h1 class="titulo-seccion">ESTADO DE LA INVERSIÓN</h1>
+    
+    {% if contenido%}
+        <div class="status-container">
+            <ul class="status-list">
+                <li class="status-item">Invertido:</li>
+                <li class="status-item">{{contenido[0]}}</li>
+            </ul>
+        </div>
+        <div class="status-container">
+            <ul class="status-list">
+                <li class="status-item">Valor actual:</li>
+                <li class="status-item">{{contenido[1]}}</li>
+            </ul>
+        </div>
+
+        <section class="tabla">
+            <table class="table-criptos">
+                <thead class="cabecera-tabla">
+                    <tr class="cabecera-criptos">
+                        
+                        
+                        <th>Saldo Criptos</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in saldoCriptos %}
+                        <tr>
+                            
+                            <td>{{item[0]}}</td>
+                            <td>{{item[1]}}</td>
+                            
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </section>
+
+
+    {% else %}
+
+        <div class="no-movs"><h1 class="subtitulo">Sin datos</h1></div>
+    
+    {%endif%}
+
+    <p class="actions">
+        <a class="buttons" href="/" role="button">Volver</a>
+        
+    </p>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/pico.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/purchase.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/status.css')}}">
+
+    <title>myCriptos | {% block titulo %} {% endblock %}</title>
+</head>
+<body>
+    <header class="logo">
+        MyCryptos
+    </header>
+
+    {% block menu %}
+    
+    {% endblock %}
+    {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+            <section class="error-container">
+                <ul class="error-list">
+                    {% for mensaje in mensajes %}
+                        <li class="error_msg">{{mensaje}}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+    {% endwith %}
+
+    <section class="container">
+        
+        {% block contenido %}{% endblock %}
+
+    </section>
+
+    <footer class="mi-footer">
+        <div class="container">
+             © 2023 Manuel LG | Todos los derechos reservados
+        </div>
+    </footer>
+</body>
+</html>

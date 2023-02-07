@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Index {% endblock %}
+{% block menu%}
+    <nav class="navbar-container">
+        <ul class = "navbar-list">
+            <li class="navbar-item"><p class="item-desactivado">Inicio</p></li>
+            <li class="navbar-item"><a href="/purchase">Compra</a></li>
+            <li class="navbar-item"><a href="/status">Estado</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block contenido %}
+
+    <h1 class="titulo-seccion">MOVIMIENTOS</h1>
+    {% if movimientos %}
+        <table class="table">
+            <thead class="cabecera">
+                <tr class="cabecera">
+                    
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>From</th>
+                    <th>Q</th>
+                    <th>To</th>
+                    <th>Q</th>
+                    <th>P.U</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                {% for item in movimientos %}
+                   
+                    <tr>
+                        
+                        <td>{{item['fecha']}}</td>
+                        <td>{{item['hora']}}</td>
+                        <td>{{item['moneda_from']}}</td>
+                        <td>{{item['cantidad_from']}}</td>
+                        <td>{{item['moneda_to']}}</td>
+                        <td>{{item['cantidad_to']}}</td>
+                        <td>{{item['cantidad_from']/item['cantidad_to']}} {{item['moneda_to']}}</td>
+                    </tr>
+                    
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="no-movs"><h1 class="subtitulo">Sin movimientos</h1></div>
+    {% endif %}
+
+    
+
+    <p class="actions">
+        <a class="buttons" href="/status" role="button">Estado</a>
+        <a class="buttons" href="/purchase" role="button">+</a>
+    </p>
+
+{% endblock %}
