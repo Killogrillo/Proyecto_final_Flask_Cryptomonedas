@@ -1,0 +1,58 @@
+.table{
+    
+    background-color: var(--background-color);
+    border: solid 5px;
+    border-color: var(--second-color);
+    margin: 2rem;
+    align-items: center; 
+
+}
+.cabecera{
+    background-color: var(--second-col);
+}
+
+.table thead {
+    text-align: center;
+    font-size: large;
+    background-color: var(--second-color);     
+    color: var(--second-color);
+    border-bottom: solid 2px ;
+    
+}
+.table thead th{
+    color: var(--white-color);  
+    text-align: center;
+    font-size: large;
+    border-bottom: solid 2px ;
+    border-color: var(--second-color);
+}
+
+td {   
+    border: solid #000 1px ;
+}
+
+.actions{
+    display: flex;
+    justify-content:right;
+    background-color: var(--bg-color);
+
+}
+.buttons{
+    padding: 0 2rem 0 2rem;
+    background-color: var(--second-color);
+    margin-right: 1rem;
+    color: var(--title-color);
+    font-size: 2rem;
+    text-align: left;
+    border: none;
+   
+}
+
+.no-movs {
+    display:flex;
+    justify-content: center;
+
+}
+.subtitulo{
+    color:var(--logo-color)
+}

@@ -5,8 +5,8 @@
     <nav class="navbar-container">
         <ul class = "navbar-list">
             <li class="navbar-item"><p class="item-desactivado">Inicio</p></li>
-            <li class="navbar-item"><a href="/purchase">Compra</a></li>
-            <li class="navbar-item"><a href="/status">Estado</a></li>
+            <li class="navbar-item"><a href="/purchase" role="button">Compra</a></li>
+            <li class="navbar-item"><a href="/status" role="button">Status</a></li>
         </ul>
     </nav>
 {% endblock %}
@@ -49,12 +49,5 @@
     {% else %}
         <div class="no-movs"><h1 class="subtitulo">Sin movimientos</h1></div>
     {% endif %}
-
-    
-
-    <p class="actions">
-        <a class="buttons" href="/status" role="button">Estado</a>
-        <a class="buttons" href="/purchase" role="button">+</a>
-    </p>
 
 {% endblock %}

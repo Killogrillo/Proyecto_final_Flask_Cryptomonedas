@@ -1,4 +1,4 @@
-# MyCryptos
+# MyCryptos App
 
 Aplicación de control de valores en criptomonedas
 
@@ -11,16 +11,16 @@ Con SQLite crea una base de datos con el fichero indicado.
 
 Debes hacer lo siguiente:
 
-1. Copiar el fichero `.env_template` y elegir una de las opciones de `FLASK_ENV`:
+1. Copiar el fichero `.env_template` y elegir una de las opciones de`FLASK_DEBUG`:
 
     ```
-    FLASK_ENV = <tu opción aquí>
+    FLASK_DEBUG = <tu opción aquí>
     ```
 2. Renombrar el fichero como `.env`
 
 
 ## SECRET_KEY
-Debes generar una secret-key.
+Debes pedir una SECRET KEY.
 
 ## API_KEY
 Debes pedir una API KEY a la página coinAPI.io

@@ -4,9 +4,9 @@
 {% block menu%}
     <nav class="navbar-container">
         <ul class = "navbar-list">
-            <li class="navbar-item"><a href="/">Inicio</a></li>
+            <li class="navbar-item"><a href="/" role="button">Inicio</a></li>
             <li class="navbar-item"><p class="item-desactivado">Compra</p></li>
-            <li class="navbar-item"><a href="/status">Estado</a></li>
+            <li class="navbar-item"><a href="/status" role="button">Status</a></li>
         </ul>
     </nav>
 {% endblock %}
@@ -73,10 +73,7 @@
         </section>
         <div class="botones">
                 {{formulario.campos}}
-                {{ formulario.aceptar() }}
-           
-                <a class= "cancelar" href="/" role="button"></a>
-                
+                {{ formulario.aceptar() }}            
                 {{formulario.from_hidden}}
                 {{formulario.to_hidden}}
                 {{formulario.cant_hidden}}

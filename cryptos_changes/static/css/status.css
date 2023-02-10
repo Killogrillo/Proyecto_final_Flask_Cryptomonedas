@@ -1,0 +1,15 @@
+
+.status-item{
+    list-style-type: none;
+    color: var(--second-color);
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: black 1px 1px;
+    
+}
+.color-fondo{
+    background-color: red;
+    background-color: green;
+    
+}

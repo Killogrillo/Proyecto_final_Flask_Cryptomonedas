@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500&display=swap');
+:root{
+    --bg-color: #3A3E8F;
+    --title-color: #d4f5f5ff;
+    --second-color: #000000;
+    --white-color: #F7F9F7;
+
+
+}
+
+body{
+    display: block;
+    background-color: var(--bg-color);
+    background-size: cover;
+    color: var(--title-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+
+    
+    
+}
+header{
+    display: block;
+    background-color: #0E0101;
+    background-size: cover;
+    color: var(--title-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    
+}
+footer {
+   
+    background-color: #0E0101;
+    position: absolute;
+    text-align:center ;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    
+ }
+.navbar-container{
+    display: flex;
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.navbar-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.5rem;
+    width: 100vh;
+
+}
+.navbar-item a,p{
+    
+    color: var(--title-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    float:right;
+    padding: 2px 1rem;
+    background-color:var(--second-color);
+    text-shadow: var(--second-color) 2px 2px;
+}
+
+.item-desactivado{
+    color: var(--bg-color)
+}
+.logo{
+    font-size: 2rem;
+    padding:2rem 0 2rem 1.5rem;
+    text-shadow: black 2px 2px;
+    
+}
+.titulo-seccion{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--title-color);
+    display: flex;
+    justify-content: center;
+    text-shadow: black 2px 2px;
+}
+
+.error_msg{
+    margin: 0;
+    padding: 5px 60px;
+    color: red;
+    background-color: var(--title-color);
+    text-decoration: none;
+    list-style-type: none;
+    border: solid 2px;
+    border-color: red;
+    text-align: right;
+    background: url('../images/alerta.png') left no-repeat;
+    background-size: 40px;
+}
+.error-container{
+    background-color: var(--title-second);
+    width: fit-content;
+    margin-left: 4rem;
+   
+    
+}
+.error-list{
+    margin: 0 ;
+    padding: 0 ;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    text-decoration: none;
+    list-style-type: none;
+    border: solid 2px;
+    border-color: red;
+}
+.igual{
+    color:#000000;   
+    
+}
+.perdida{
+    color: red;
+    
+}
+
+.ganancia{
+    color: green;
+}
+
+.color-fondo{
+    color: green;
+    color: red;
+    color: black; 
+}
