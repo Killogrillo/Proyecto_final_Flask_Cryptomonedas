@@ -146,20 +146,13 @@ def estado():
                 
             ganancias_perdidas= valor_actual - valor_compra
 
-            if ganancias_perdidas <0:
-                ColorText = "red"
-            elif ganancias_perdidas == 0:
-                ColorText= "black"
-            else:
-                ColorText="green" 
-
             resultados.append(round(invertido,2))
             resultados.append(round(valor_actual,2))
             resultados.append(round(recuperado,2))
             resultados.append(round(valor_compra,2))
             resultados.append(round(ganancias_perdidas,2))
 
-        return render_template("status.html", contenido = resultados, ColorText = ColorText)
+        return render_template("status.html", contenido = resultados)
 
     except sqlite3.Error as e:
         flash("Se ha producido un error en la base de datos. Inténtelo de nuevo más tarde")
