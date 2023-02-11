@@ -176,7 +176,6 @@ class ValueCrypto:
         datos = respuesta.json()
         cambio_todos= {}
 
-
         for dato in datos['rates']:
             if dato['asset_id_quote'] in MONEDAS:
                 cambio_todos[dato['asset_id_quote']]= 1/dato['rate']

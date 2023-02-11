@@ -151,6 +151,7 @@ def estado():
             resultados.append(round(recuperado,2))
             resultados.append(round(valor_compra,2))
             resultados.append(round(ganancias_perdidas,2))
+            resultados.append(round(ganancias_perdidas > 0))
 
         return render_template("status.html", contenido = resultados)
 

@@ -43,10 +43,14 @@
     </div>
 
     <div class="grid">
-
+       
         <li class="status-item">Ganancias/Perdidas: </li>
-        <li class="status-item">{{contenido[4]}}</li>
-
+        {% if contenido[5] %}
+        <li class="status-item" style="color: green"> {{ contenido[4] }}</li>
+        {% else %}
+        <li class="status-item" style="color: red">{{ contenido[4] }}</li>
+        {% endif %}
+        
     </div>    
 
     {% else %}

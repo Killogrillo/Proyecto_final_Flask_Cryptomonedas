@@ -114,16 +114,16 @@ footer {
     border: solid 2px;
     border-color: red;
 }
-.igual{
+.black{
     color:#000000;   
     
 }
-.perdida{
+.red{
     color: red;
     
 }
 
-.ganancia{
+.green{
     color: green;
 }
 
