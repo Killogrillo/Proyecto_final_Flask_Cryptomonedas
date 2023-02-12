@@ -127,8 +127,8 @@ footer {
     color: green;
 }
 
-.color-fondo{
-    color: green;
-    color: red;
-    color: black; 
+.scroll{
+    width: 500px;
+    height: 200px;
+    overflow: auto;
 }

@@ -12,42 +12,45 @@
 {% endblock %}
 
 {% block contenido %}
-
-    <h1 class="titulo-seccion">MOVIMIENTOS</h1>
+    
+    <h1 class="titulo-seccion" >MOVIMIENTOS</h1>
     {% if movimientos %}
-        <table class="table">
-            <thead class="cabecera">
-                <tr class="cabecera">
-                    
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>From</th>
-                    <th>Q</th>
-                    <th>To</th>
-                    <th>Q</th>
-                    <th>P.U</th>
-                </tr>
-            </thead>
-            <tbody>
-               
-                {% for item in movimientos %}
-                   
-                    <tr>
+        <div class="table-container" style="height: 700px; overflow: auto; ">
+            <table class="table">
+                <thead class="cabecera">
+                    <tr class="cabecera">
                         
-                        <td>{{item['fecha']}}</td>
-                        <td>{{item['hora']}}</td>
-                        <td>{{item['moneda_from']}}</td>
-                        <td>{{item['cantidad_from']}}</td>
-                        <td>{{item['moneda_to']}}</td>
-                        <td>{{item['cantidad_to']}}</td>
-                        <td>{{item['cantidad_from']/item['cantidad_to']}} {{item['moneda_to']}}</td>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>From</th>
+                        <th>Q</th>
+                        <th>To</th>
+                        <th>Q</th>
+                        <th>P.U</th>
                     </tr>
+                </thead>
+                <tbody>
+                
+                    {% for item in movimientos %}
                     
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <div class="no-movs"><h1 class="subtitulo">Sin movimientos</h1></div>
-    {% endif %}
+                        <tr>
+                            
+                            <td>{{item['fecha']}}</td>
+                            <td>{{item['hora']}}</td>
+                            <td>{{item['moneda_from']}}</td>
+                            <td>{{item['cantidad_from']}}</td>
+                            <td>{{item['moneda_to']}}</td>
+                            <td>{{item['cantidad_to']}}</td>
+                            <td>{{item['cantidad_from']/item['cantidad_to']}} {{item['moneda_to']}}</td>
+                        </tr>
+                    
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+            <div class="no-movs"><h1 class="subtitulo">Sin movimientos</h1></div>
+            
+        {% endif %}
 
 {% endblock %}

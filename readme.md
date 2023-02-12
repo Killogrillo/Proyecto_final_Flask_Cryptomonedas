@@ -1,6 +1,12 @@
 # MyCryptos App
 
-Aplicación de control de valores en criptomonedas
+Aplicación de control de valores en criptomonedas, programa realizado con el framework Flask, con motor de base de datos SQLite.
+
+## En su entorno de python ejecutar comando
+```
+pip install -r requirements.txt
+```
+Las librerias de flask utilizadas están en https://flask.palletsprojects.com/en/2.2.x/
 
 ## Creación BBDD
 
@@ -11,14 +17,19 @@ Con SQLite crea una base de datos con el fichero indicado.
 
 Debes hacer lo siguiente:
 
-1. Copiar el fichero `.env_template` y elegir una de las opciones de`FLASK_DEBUG`:
+1. Copiar el fichero `.env_template` a.env y agregar las siguientes lineas
 
     ```
-    FLASK_DEBUG = <tu opción aquí>
+    FLASK_APP=main.py
+    FLASK_DEBUG=true
+
     ```
-2. Renombrar el fichero como `.env`
+## Ejecucion con el .env
 
-
+Debes ejecutar este comando:
+```
+flask run
+```
 ## SECRET_KEY
 Debes pedir una SECRET KEY.
 
@@ -27,11 +38,13 @@ Debes pedir una API KEY a la página coinAPI.io
 
 ## Fichero .config
 Copiar el fichero `config_template`:
+
     ```
     cp config_template.py config.py
     ```
 
 Después debes hacer lo siguiente:
+
 1. Introducir la ruta a tu BBDD en el nuevo fichero
     ```
     ORIGIN_DATA = <tu ruta aquí>
@@ -44,5 +57,4 @@ Después debes hacer lo siguiente:
     ```
     API_KEY = <tu clave aquí>
     ```
-4. Renombrar el fichero como `config.py`
 
