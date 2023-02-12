@@ -5,11 +5,15 @@
     border-color: var(--second-color);
     margin: 2rem;
     align-items: center; 
+    width: 100%;
+   
     
 
 }
 .cabecera{
     background-color: var(--second-col);
+    
+    
 }
 
 .table thead {
@@ -25,11 +29,13 @@
     text-align: center;
     font-size: large;
     border-bottom: solid 2px ;
-    border-color: var(--second-color);
+    border-color: var(--second-color);      
+
 }
 
 td {   
     border: solid #000 1px ;
+    
 }
 
 .actions{
@@ -52,8 +58,4 @@ td {
 .no-movs {
     display:flex;
     justify-content: center;
-
-}
-.subtitulo{
-    color:var(--logo-color)
 }
